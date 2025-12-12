@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body{
+    height: 100%;
+    width: 100%;
+}
+
+main{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.box{
+    height: 200px;
+    width: 400px;
+    background-color: grey;
+    animation: rotate 2s infinite ;
+}
+
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 35px;
+    text-align: center;
+    text-shadow: 5px 5px whitesmoke;
+}
+
+@keyframes rotate{
+    0% {
+        background-image: conic-gradient(from 90deg at 50% 50% ,rgb(255, 24, 24)0% 25%, rgb(11, 201, 40) 25% 50%,rgb(20, 83, 220) 50% 75%, rgb(244, 244, 244) 75% 100%);
+        box-shadow:10px 10px rgb(195, 255, 0) ;
+    }
+    
+    25%{
+        background-image: conic-gradient(from 90deg at 50% 50%, rgb(11, 201, 40)0% 25%,rgb(20, 83, 220) 25% 50% , rgb(244, 244, 244) 50% 75% ,rgb(255, 24, 24)75% 100%);
+        box-shadow:10px -10px rgb(195, 255, 0) ;
+    }
+    50%{
+        background-image: conic-gradient(from 90deg at 50% 50%, #1453dc 0% 25%, #f4f4f4 25% 50% , rgb(255, 24, 24)  50% 75% ,rgb(11, 201, 40) 75% 100%);
+        box-shadow:-10px 10px rgb(195, 255, 0) ;
+    }
+    75%{
+        background-image: conic-gradient(from 90deg at 50% 50%, rgb(244, 244, 244)0% 25%,rgb(255, 24, 24) 25% 50% ,rgb(11, 201, 40)  50% 75% ,rgb(20, 83, 220)75% 100%);
+        box-shadow:-10px -10px rgb(195, 255, 0) ;
+    }
+    100%{
+        background-image: conic-gradient(from 90deg at 50% 50% ,rgb(255, 24, 24)0% 25%, rgb(11, 201, 40) 25% 50%,rgb(20, 83, 220) 50% 75%, rgb(244, 244, 244) 75% 100%);
+        box-shadow:10px 10px rgb(195, 255, 0) ;
+    }
+}

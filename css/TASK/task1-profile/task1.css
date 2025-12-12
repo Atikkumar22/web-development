@@ -1,0 +1,94 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    
+} */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Story+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans+Deva:wght@100..800&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&family=Zen+Kurenaido&display=swap');
+
+body,
+html {
+    /* width: 100%;
+    height: 100%; */
+    box-sizing: border-box;
+    background-color: rgba(213, 213, 213, 0.838);
+}
+
+#content {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 200px;
+    margin-left: 200px;
+}
+
+.fonts {
+    font-family: "Zen Kurenaido", sans-serif;
+    text-align: center;
+    font-weight: bold;
+    background-color: white;
+    padding: 5px 10px 5px 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-right: 150px;
+    margin-left: 150px;
+}
+
+h3 {
+    font-family: "Zalando Sans Expanded", sans-serif;
+    text-align: center;
+}
+
+#header {
+    background-color: rgb(26, 55, 65);
+    color: wheat;
+    text-align: center;
+    padding: 2% 0;
+}
+
+#header h2 {
+    font-family: "Playpen Sans Deva", cursive;
+    letter-spacing: 1px;
+    margin-bottom: 0%;
+}
+
+#header p {
+    font-family: "Story Script", sans-serif;
+    margin-top: 0px;
+}
+
+#about {
+    background-color: white;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+#edu {
+    background-color: rgb(196, 240, 255);
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-top: 2%;
+}
+
+#skill {
+    background-color: #fffec1;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-top: 2%;
+
+}
+
+#project {
+    background-color: rgb(231, 255, 195);
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-top: 2%;
+
+}
+
+#contact {
+    background-color: rgb(255, 194, 255);
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-top: 2%;
+
+}

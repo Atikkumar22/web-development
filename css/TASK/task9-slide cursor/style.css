@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body{
+    height: 100%;
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#main1{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* gap: 20px; */
+    anchor-name: --some-anchor;
+}
+
+.box{
+    height: 200px;
+    width: 200px;
+}
+
+.box:hover{
+    anchor-name: --some-anchor;
+}
+
+.red{
+    background-color: rgb(160, 21, 21);
+    /* anchor-name: --some-anchor; */
+}
+
+.green{
+    background-color: rgb(33, 116, 33);
+}
+
+.blue{
+    background-color: rgb(25, 25, 112);
+}
+
+.anchor{
+    background-color: rgb(230, 171, 101);
+    border-radius: 10px;
+    position: absolute;
+    top: anchor(top);
+    left: anchor(left);
+    bottom: anchor(bottom);
+    right: anchor(right);
+    pointer-events: none;
+    position-anchor: --some-anchor;
+    transition: all 0.3s linear;
+    mix-blend-mode: difference;  /* colors ke mixes ko hum use kr skte h iss elements or iski ala-2  property define krti h colors mix kesa hoga uske backdrop ke resp. me ...jese diff use krne hamra anchor box uske back div ke color ka opposite color apna leta h   */
+}
+
+
+
+/* SECOND EFFECT THAT TEACHES ABOUT HAS() */
+
+#main2{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.balls{
+    height: 50px;
+    width: 50px;
+    border: 10px solid white;
+}
+
+.ball{
+    border-radius: 50%;
+    display: flex;
+    gap: 10px;
+}
+
+.laal{
+    background-color: rgb(160, 21, 21);
+    /* anchor-name: --some-anchor; */
+}
+
+.hara{
+    background-color: rgb(33, 116, 33);
+}
+
+.nela{
+    background-color: rgb(25, 25, 112);
+}

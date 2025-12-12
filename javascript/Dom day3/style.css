@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'helvetica neue';
+    color: #fff;
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+ body{
+    overflow: hidden;
+ }
+
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    padding: 15px 30px;
+    font-family: monospace;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    color: rgb(5, 5, 125);
+    background-color: rgb(247, 97, 3);
+    font-size: 30px;
+    position: relative;
+    z-index: 10;
+}
+
+button:active{
+    scale: 0.95;
+}
+    

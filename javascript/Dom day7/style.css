@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    cursor: none;
+    background-color: black;
+    /* cursor: url('https://cdn.custom-cursor.com/packs/5456/anime-mob-psycho-100-shigeo-kageyama-pack.png') 16 16, auto; */
+}
+
+#cursor{
+    height: 100px;
+    width: auto;
+    position: fixed;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+
+} 
+
+#box{
+    height: 500px;
+    width: 500px;
+    background-color: crimson;
+}

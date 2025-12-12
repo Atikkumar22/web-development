@@ -1,0 +1,20 @@
+this is called SASSY-CSS
+it just a advance technique of writing css in the code 
+
+our browser simply knows only html css and js. so when we write scss it doesnt work because of which we use the extention to convert that scss into normal css that the browser can understand. 
+when the extention works it creates an css equivanlent to the scss file 
+ 
+there are mainly three mostly used concepts in scss
+1. nesting
+-it is the concept of nesting elements in each other just like we do in the loops
+-it is useful in way were we have to target elements of parent tags/elements , instead of writing it in different line we can simply write it in the parent elements 
+                .parent{.....
+                    .child{....
+                            h1{...
+                           }
+                            p{....
+                           }
+                    }
+ 
+                }
+

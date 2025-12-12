@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'helvetica neue';
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card{
+    width: 500px;
+    background-color: rgb(255, 191, 157);
+    border-radius: 10px;
+    border: 3px solid red ;
+    padding: 30px;
+}
+
+.card p{
+  font-size: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  
+}
+
+.card p span{
+    color: blue;
+    font-family: fantasy;
+    font-weight: 100;
+    font-size: 19px;
+}
+
+.outer{
+    height: 20px;
+    border-radius: 50px;
+    width: 100%;
+    background-color: rgb(246, 203, 203);
+    margin: 20px 0 20px 0;
+}
+
+.inner{
+    height: 100%;
+    width: 0;
+    border-radius: 50px;
+    background-color: rgb(203, 126, 2);
+}
+
+.bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bottom h2{
+  font-family: monospace;
+  font-size: 22px;
+}
+
+.bottom button{
+  font-family: monospace;
+  font-size: 20px;
+  padding: 6px 12px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(241, 135, 59);
+  transition:  ease-in 0.3s;
+}
+
+button:active{
+  scale: 0.7;
+}
+
+button:hover{
+  box-shadow: 0 0 15px rgb(253, 150, 77) ;
+  transform: translate(0px, -3px);
+}

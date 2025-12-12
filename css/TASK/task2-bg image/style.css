@@ -1,0 +1,84 @@
+@font-face {
+    font-family:title ;
+    src: url(Duskfall-BF68b3bd7ddf9f3.ttf);
+}
+
+@font-face {
+    font-family:text ;
+    src: url(Mantinia\ Regular.otf);
+}
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body,html{
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+    height: 100vh;
+    width: 100%;
+    background-color: blueviolet;
+    background-image: url(er.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding-top: 1%;
+}
+
+h1 {
+
+    font-family: title;
+    font-size: 130px;
+    letter-spacing: 0.7cm;
+    color: #f0ac00;
+    text-shadow:
+        /* Top-left border */
+        -1px -1px 0 black,
+        /* Top-right border */
+        1px -1px 0 black,
+        /* Bottom-left border */
+        -1px 1px 0 black,
+        /* Bottom-right border */
+        1px 1px 0 black,
+        /* Inner glow layer */
+        #fbba16 2px 0 100px;
+}
+
+h3{
+    font-size: 40px;
+    font-family:text;
+    color: #DBC173;
+    padding-top:1% ;
+    text-shadow: 
+    /* -1px (left) -1px (up) 0 (no blur) black (color) */
+    -1px -1px 0 black,
+    
+    /* 1px (right) -1px (up) 0 (no blur) black (color) */
+     1px -1px 0 black,
+     
+    /* -1px (left) 1px (down) 0 (no blur) black (color) */
+    -1px  1px 0 black,
+    
+    /* 1px (right) 1px (down) 0 (no blur) black (color) */
+     1px  1px 0 black;
+    
+}
+
+button{
+    font-family: text;
+    font-size: 15px;
+    margin: 90px;
+    padding: 10px 30px;
+    border: 0px;
+    border-radius: 15px;
+    background-color: #d59c51;
+    text-align: center;
+    color: rgb(9, 50, 9);
+    cursor: pointer;
+
+}
