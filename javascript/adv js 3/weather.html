@@ -4,10 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="weather.css">
 </head>
 <body>
-    <h1>This is a weather app </h1>
+    <!-- <h1>Weather Boy</h1>
+    <input type="text" placeholder="Enter city" id="city">
+    <button id="btn">Get Weather</button>
+    <h2 id="result"></h2> -->
+<main class="app">
 
-    <script src="script.js"></script>
+    <div class="search">
+        <input type="text" placeholder="Enter city" id="city">
+        <button id="btn">Get Weather</button>
+    </div>
+
+    <div class="weather">
+    
+        <h2 id="city-name">City Name:</h2>
+        <h3 id="temp">-- °C</h3>
+        <p id="cond">Weather condition</p>
+    
+        <div class="extra">
+            <p>Humidity: <span id="Humidity">--</span>% </p>
+            <p>Wind: <span id="wind">--</span>km</p>
+        </div>
+
+    </div>
+</main>
+    
+<script src="weather.js"></script>
 </body>
 </html>

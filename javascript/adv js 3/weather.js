@@ -6,6 +6,8 @@
 
 // let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`
 
+
+//USING THEN TO CLEAN RAW DATA TO REAL DATA
 /*function getWeather(city) {
     let apikey = `d237fabe691d5e6dc1ea050590db4365`;
      fetch(
@@ -19,7 +21,8 @@
 }
 getWeather("delhi") */
 
-async function getWeather(city) {
+//USING ASYNC AWAIT FOR DATA ACCEPTANCE FROM API AND MAKING IT REAL
+/*async function getWeather(city) {
     try{
         let apikey = `d237fabe691d5e6dc1ea050590db4365`; //Apikey ko function ke bahar global variable bana do to bhi fetch use karega.
      let raw = await fetch(
@@ -39,4 +42,42 @@ async function getWeather(city) {
     }
 }
 
-getWeather("greater noida")
+getWeather("greater noida")*/
+
+let btn = document.querySelector('#btn');
+let input = document.querySelector('#city');
+let Cname = document.querySelector('#city-name');
+let temperature = document.querySelector('#temp');
+let conditon = document.querySelector('#cond');
+
+async function getWeather(city) {
+
+   try {
+      let apikey = `d237fabe691d5e6dc1ea050590db4365`; 
+      let raw = await fetch(
+         `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=metric`
+      )
+
+      if (!raw.ok) {
+         throw new Error("city na mili bhaiya ya fir kachu galat hogya ")
+      }
+
+      let real = await raw.json();
+      
+      result.innerHTML = ``
+
+   }
+   catch (err) {
+      console.log(err.message);
+   }
+}
+
+btn.addEventListener(`click`, function () {
+   let city = input.value;
+   getWeather(city);
+});
+
+
+
+
+
