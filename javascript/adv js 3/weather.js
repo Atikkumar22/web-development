@@ -46,9 +46,11 @@ getWeather("greater noida")*/
 
 let btn = document.querySelector('#btn');
 let input = document.querySelector('#city');
-let Cname = document.querySelector('#city-name');
+let cityName = document.querySelector('#cityName');
 let temperature = document.querySelector('#temp');
 let conditon = document.querySelector('#cond');
+let humid = document.querySelector('#Humidity')
+let wind = document.querySelector('#wind')
 
 async function getWeather(city) {
 
@@ -64,16 +66,33 @@ async function getWeather(city) {
 
       let real = await raw.json();
       
-      result.innerHTML = ``
+       console.log(real);
+    console.log(real.main.temp);
+    console.log("humidity")
+    console.log(real.main.humidity);
+    console.log(real.wind.speed);
+
+      cityName.innerHTML = real.name
+      temp.innerHTML = `${real.main.temp}°C`
+      cond.innerHTML = real.weather[0].description
+      humid.innerHTML = real.main.humidity
+      wind.innerHTML = real.wind.speed
 
    }
    catch (err) {
-      console.log(err.message);
+      Cname.innerHTML = "Error"
+      conditon.innerHTML = err.message ;
    }
 }
 
 btn.addEventListener(`click`, function () {
-   let city = input.value;
+   let city = input.value.trim();
+
+   if (city === "") {
+    alert("City ka naam likho")
+    return
+  }
+
    getWeather(city);
 });
 
