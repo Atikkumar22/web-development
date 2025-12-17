@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #87ceeb;
+}
+
+.app {
+  background: white;
+  padding: 20px;
+  width: 300px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.search {
+  margin: 15px 0;
+}
+
+.search input {
+  padding: 8px;
+  width: 70%;
+}
+
+.search button {
+    margin-top:5px ;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.weather h3 {
+  font-size: 32px;
+  margin: 10px 0;
+}
+
+.extra {
+  margin-top: 10px;
+  font-size: 14px;
+}
