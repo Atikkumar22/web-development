@@ -57,7 +57,7 @@ async function getWeather(city) {
    errorMsg.innerHTML = "";
 
    try {
-      let apikey = `d237fabe691d5e6dc1ea050590db4365`; 
+      let apikey = `generate your own key and put it here`; 
       let raw = await fetch(
          `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=metric`
       )
