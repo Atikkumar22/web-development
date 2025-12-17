@@ -54,3 +54,8 @@
     console.log(jsObj);
 
 */
+
+//Error in promise-  agar server ki taraf se data na aya to wo reject me ni jayega bulki 
+                    // fulfillled me chala jayega isko handle krne ke liye hum error handling krenge manually 
+//Reject condition-  internet down , server down , dns down
+

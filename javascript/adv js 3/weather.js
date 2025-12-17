@@ -49,10 +49,12 @@ let input = document.querySelector('#city');
 let cityName = document.querySelector('#cityName');
 let temperature = document.querySelector('#temp');
 let conditon = document.querySelector('#cond');
-let humid = document.querySelector('#Humidity')
-let wind = document.querySelector('#wind')
+let humid = document.querySelector('#Humidity');
+let wind = document.querySelector('#wind');
+let errorMsg = document.querySelector('#error');
 
 async function getWeather(city) {
+   errorMsg.innerHTML = "";
 
    try {
       let apikey = `d237fabe691d5e6dc1ea050590db4365`; 
@@ -62,28 +64,34 @@ async function getWeather(city) {
 
       if (!raw.ok) {
          throw new Error("city na mili bhaiya ya fir kachu galat hogya ")
-      }
+      };
 
       let real = await raw.json();
       
-       console.log(real);
-    console.log(real.main.temp);
-    console.log("humidity")
-    console.log(real.main.humidity);
-    console.log(real.wind.speed);
+      console.log(real);
+      console.log(real.main.temp);
+      console.log("humidity")
+      console.log(real.main.humidity);
+      console.log(real.wind.speed);
 
-      cityName.innerHTML = real.name
-      temp.innerHTML = `${real.main.temp}°C`
-      cond.innerHTML = real.weather[0].description
-      humid.innerHTML = real.main.humidity
-      wind.innerHTML = real.wind.speed
+      cityName.innerHTML = real.name;
+      temperature.innerHTML = `${real.main.temp} °C`;
+      conditon.innerHTML = real.weather[0].description;
+      humid.innerHTML = real.main.humidity;
+      wind.innerHTML = real.wind.speed;
 
    }
-   catch (err) {
-      Cname.innerHTML = "Error"
-      conditon.innerHTML = err.message ;
-   }
-}
+   catch (error) {
+      errorMsg.innerHTML = error.message
+
+      cityName.innerHTML = "";
+      cityName.innerHTML = "";
+      temp.innerHTML = "";
+      cond.innerHTML = "";
+      humid.innerHTML = "";
+      wind.innerHTML = "";
+   };
+};
 
 btn.addEventListener(`click`, function () {
    let city = input.value.trim();
