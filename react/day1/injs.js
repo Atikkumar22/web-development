@@ -3,7 +3,7 @@
 
 import tit from "./tit.js";
 
-//document ki jagah react likh hai : 1st- elements , 2nd- attributes, 3rd- content
+//document ki jagah react likh hai : 1st- elements , 2nd- attributes, 3rd- children
 let h1 = React.createElement('h1' ,null, 'Main hu insaan' );
 let h2 = React.createElement('h2' ,null, 'Main hu danav' );
 
