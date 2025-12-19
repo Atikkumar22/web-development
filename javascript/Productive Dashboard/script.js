@@ -1,0 +1,8 @@
+let allElems = document.querySelectorAll('.elem')
+
+allElems.forEach(function(elem){
+    elem.addEventListener('click', function(){
+        // console.log(elem.id);
+        console.log(document.querySelectorAll('.fullElem'))
+    })
+})

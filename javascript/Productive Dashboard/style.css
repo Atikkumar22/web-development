@@ -63,5 +63,35 @@ section.allElem{
     font-size: 20px;
     height: 400px;
     width: 250px;
+    overflow: hidden;
+    position: relative;
+    transition: all ease-in 0.2s;
 }
 
+.elem:active{
+    scale: 0.95;
+}
+
+.elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover
+
+}
+
+.elem h2{
+    position: absolute;
+    right: 6%;
+    bottom: 4%;
+    color: #EBE1D1;
+    font-family: light;
+    font-size: 25px;
+}
+
+.fullElem{
+    height: 100%;
+    width: 100%;
+    background-color: var(--tri1);
+    padding: 20px;
+    display: none;
+}
