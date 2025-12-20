@@ -7,13 +7,13 @@ const CreateTodo = () => {
 
     return (
         <>
-            <div>
+            <div className="div1">
                 <h2>I just created a rafce snippet by hand</h2>
             </div>
 
-            <div style={{ padding: "20px" }}>
+            <div style={{ padding: "20px" }} className="div2">
                 <span>Hello World</span>
-                <button onClick={handleClick}>Click</button>
+                <button onClick={handleClick} className="btn">Click</button>
             </div>
         </>
     );
