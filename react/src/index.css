@@ -40,8 +40,9 @@ body {
   border: none;
   color: red;
 } */
+@import "tailwindcss";
 
-/* @import url("/navbar/nav.css"); */
+/* @import url("./navbar/nav.css"); */
 
 * {
   margin: 0;
@@ -49,29 +50,31 @@ body {
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
 }
 
 @font-face {
-    font-family: light;
-    font-weight: 200;
-    src: url(./day3-structures/assets/AeonikTRIAL-Light.otf);
-}
-@font-face {
-    font-family: bold;
-    font-weight: 700;
-    src: url(./day3-structures/assets/AeonikTRIAL-Bold.otf);
+  font-family: light;
+  font-weight: 200;
+  src: url(./day3-structures/assets/AeonikTRIAL-Light.otf);
 }
 
 @font-face {
-    font-family: normal;
-    font-weight: 500;
-    src: url(./day3-structures/assets/AeonikTRIAL-Regular.otf);
+  font-family: bold;
+  font-weight: 700;
+  src: url(./day3-structures/assets/AeonikTRIAL-Bold.otf);
 }
 
-.navbar{
+@font-face {
+  font-family: normal;
+  font-weight: 500;
+  src: url(./day3-structures/assets/AeonikTRIAL-Regular.otf);
+}
+
+.navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -81,31 +84,52 @@ html, body {
   background-color: rgb(237, 237, 237);
 }
 
-.navCenter{
+.navCenter {
   display: flex;
   gap: 50px;
-  /* justify-content: space-between; */
-  /* flex-direction: column; */
   align-items: center;
 }
 
-.navCenter a{
+.navCenter a {
   text-decoration: none;
   font-family: normal;
   color: rgb(81, 80, 80);
 }
 
-.navLeft h2{
+.navLeft h2 {
   font-family: bold;
   font-weight: 500;
+  font-size: 20px;
 }
 
-.navRight button{
+.navRight button {
   font-family: normal;
-  padding: 8px 15px;
+  padding: 5px 15px;
   border-radius: 16px;
   border: none;
   background-color: black;
   color: white;
-  
+}
+
+.hero-img{
+}
+
+.hero-img>img {
+  /* background-image: url(./day3-structures/assets/pic1.avif); */
+  position: relative;
+  height: 80vh;
+  width: 75%;
+  margin: 10px 180px;
+  object-fit: cover;
+  object-position: top;
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 20px;
+}
+
+.hero-center{
+  position: absolute;
+  top: 10;
+  /* right: 50; */
+  /* left: 50; */
 }
