@@ -13,7 +13,7 @@ const Nav = () => {
               <a href="#" className='navTitle'>Events </a>
               <a href="#" className='navTitle'>Contacts </a>
           </div>
-          <div class="navRight">
+          <div className="navRight">
               <button>Book now</button>
           </div>
       </div>
