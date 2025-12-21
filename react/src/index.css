@@ -78,7 +78,7 @@ body {
   padding: 0.2em 2em;
   width: 100%;
   height: 50px;
-  background-color: rgb(237, 237, 237);
+  background-color: rgb(250, 247, 247);
 }
 
 .navCenter {
@@ -108,6 +108,11 @@ body {
   color: white;
 }
 
+.hero-img{
+ height: 100%;
+ width: 100%;
+}
+
 .hero-img>img {
   /* background-image: url(./day3-structures/assets/pic1.avif); */
   position: relative;
@@ -120,7 +125,6 @@ body {
   border: none;
   border-radius: 20px;
   z-index: -1;
-  opacity: 0.8;
 }
 
 .hero-center{
@@ -153,5 +157,37 @@ body {
   background-color: black;
   border-radius: 50px;
   border: none;
-  padding: 10px 20px;
+  padding: 7px 20px;
+  font-weight: 200;
+}
+
+.hero-bottom{
+  display: flex;
+  /* justify-content: space-between; */
+  margin: 0 220px;
+  position: absolute;
+  bottom: 15%;
+  gap: 630px;
+  color: white;
+}
+
+.hero-BR{
+  line-height: 1.3;
+  font-family: light;
+  font-size: 14px;
+  font-weight: 100;
+}
+
+.hero-BL{
+  background: #4f4f4f6e;
+  display: flex;
+  font-family: light;
+  font-size: 13px;
+  font-weight: 100;
+  gap: 20px;
+  align-items: center;
+  border: 10px;
+  border-radius: 20px;
+  padding: 7px 20px;
+  /* justify-content: center; */
 }
