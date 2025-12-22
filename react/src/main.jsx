@@ -1,6 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import Nav from './day3-structures/navbar/Nav.jsx';
+import Hero from './day3-structures/hero section/Hero.jsx';
 import './index.css'
 
 import Card from "./day2-Components/Card.jsx";
@@ -15,5 +16,6 @@ createRoot(document.getElementById('root')).render(
     <CreateTodo /> */}
 
       <Nav />
+      <Hero />
   </StrictMode>
 )
