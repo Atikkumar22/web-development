@@ -71,6 +71,8 @@ body {
   src: url(./day3-structures/assets/AeonikTRIAL-Regular.otf);
 }
 
+/* NAVBAR SECTION */
+
 .navbar {
   display: flex;
   align-items: center;
@@ -107,6 +109,8 @@ body {
   background-color: black;
   color: white;
 }
+
+/* HERO SECTION */
 
 .hero-img{
  height: 100%;
@@ -191,3 +195,75 @@ body {
   padding: 7px 20px;
   /* justify-content: center; */
 }
+
+
+/* MIDDLE SECTION */
+/* Stats Section Styling */
+.stats-section {
+  padding: 80px 10%;
+  background: #f8f9fa;
+}
+
+.stats-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.badge {
+  border: 1px solid #ddd;
+  padding: 5px 15px;
+  border-radius: 15px;
+  height: fit-content;
+}
+
+.description {
+  max-width: 500px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+.feature-card {
+  border-radius: 30px;
+  padding: 40px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dark-card { background: #0a111a; color: white; }
+.white-card { background: white; border: 1px solid #eee; }
+.img-card { 
+  background: url('your-coach-image.jpg') center/cover; 
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.glass-label {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: white;
+}
+
+.counter-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  border-top: 1px solid #eee;
+  padding-top: 40px;
+}
+
+.counter-item h2 { font-size: 2rem; margin-bottom: 5px; }
+.counter-item p { color: #777; font-size: 0.9rem; }
