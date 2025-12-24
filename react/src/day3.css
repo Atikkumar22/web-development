@@ -282,3 +282,147 @@ body {
   color: #777;
   font-size: 0.9rem;
 }
+
+/* Services Section */
+
+.services-container {
+  display: flex;
+  gap: 30px;
+  padding: 60px 5%;
+  align-items: flex-start;
+  background-color: #ffffff;
+}
+
+.services-text {
+  flex: 1;
+  max-width: 350px;
+}
+
+.services-badge {
+  display: inline-block;
+  padding: 5px 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.services-description {
+  font-size: 1.8rem;
+  line-height: 1.3;
+  color: #1a1a1a;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.explore-btn {
+  background-color: #0a111a;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.service-card {
+  border-radius: 40px;
+  position: relative;
+  overflow: hidden;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.training-card {
+  flex: 1.2;
+  height: 400px;
+  background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.4)), 
+              url('day3-structures/assets/pic3.avif') center/cover;
+  color: white;
+}
+
+.card-label {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 6px 15px;
+  border-radius: 15px;
+  width: fit-content;
+  font-size: 0.9rem;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.card-footer p {
+  font-size: 1.2rem;
+  max-width: 200px;
+}
+
+.arrow-icon {
+  background: white;
+  color: black;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-right-block {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.court-card {
+  height: 280px;
+  background: url('day3-structures/assets/pic4.avif') center/cover;
+  color: white;
+}
+
+.card-overlay-text {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.court-info p {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.nav-arrows {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #eee;
+  background: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.nav-btn:hover {
+  background-color: #f0f0f0;
+}
