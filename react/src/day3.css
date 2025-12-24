@@ -288,14 +288,16 @@ body {
 .services-container {
   display: flex;
   gap: 30px;
-  padding: 60px 5%;
+  padding: 60px 10%; 
   align-items: flex-start;
   background-color: #ffffff;
+  max-width: 1440px; 
+  margin: 0 auto;
 }
 
 .services-text {
   flex: 1;
-  max-width: 350px;
+  max-width: 320px; 
 }
 
 .services-badge {
@@ -339,11 +341,12 @@ body {
 }
 
 .training-card {
-  flex: 1.2;
+  flex: 1.1;
   height: 400px;
   background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.4)), 
               url('day3-structures/assets/pic3.avif') center/cover;
   color: white;
+  border-radius: 30px; 
 }
 
 .card-label {
@@ -385,9 +388,10 @@ body {
 }
 
 .court-card {
-  height: 280px;
+  height: 250px; 
   background: url('day3-structures/assets/pic4.avif') center/cover;
   color: white;
+  border-radius: 30px;
 }
 
 .card-overlay-text {
