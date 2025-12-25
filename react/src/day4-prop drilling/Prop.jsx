@@ -17,7 +17,7 @@ function Parent({ name }) {
   );
 }
 
-// 1. Sabse upar ka component (App)
+// 1. Sabse upar ka component (prop)
 // Yahan data (state) maujood hai
 function Prop() {
   const userName = "Tennis Champion";
