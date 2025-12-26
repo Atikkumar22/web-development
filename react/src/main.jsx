@@ -12,7 +12,9 @@ import Services from './day3-structures/services/Services.jsx';
 // import './day3.css'
 
 import Prop from './day4-prop drilling/Prop.jsx';
-
+import Footer from './day4-prop drilling/Footer.jsx';
+import MainPage from './day4-prop drilling/MainPage.jsx';
+import Apps from './day4-prop drilling/Apps.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -31,6 +33,9 @@ createRoot(document.getElementById('root')).render(
 
     {/* DAY4 */}
     <Prop />
+    <Footer />
+    <MainPage />
+    <Apps />
 
   </StrictMode>
 )
