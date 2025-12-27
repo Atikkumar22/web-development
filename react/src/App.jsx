@@ -21,28 +21,29 @@ import './day4.css'
 const App = () => {
     return (
         <div>
-//DAY2
-
+            
+            {/* DAY2  */}
             {/* <Card />
-  <Paragraph />
-  <CreateTodo /> */}
+            <Paragraph />
+            <CreateTodo /> */}
 
 
-//DAY3
-
+            {/* DAY3 */}
             {/* <Nav />
-          <Hero />
-          <Middle />
-          <Services /> */}
+            <Hero />
+            <Middle />
+            <Services /> */}
 
 
-            // DAY4
-            <Prop />
+            {/* DAY4 */}
+            {/* <Prop />
             <Footer />
             <MainPage />
-            <Apps />
-        </div>
+            <Apps /> */}
+            
 
+            {/*  DAY5 */}
+        </div>
 
     )
 }
