@@ -15,6 +15,7 @@ import Prop from './day4-prop drilling/Prop.jsx';
 import Footer from './day4-prop drilling/Footer.jsx';
 import MainPage from './day4-prop drilling/MainPage.jsx';
 import Apps from './day4-prop drilling/Apps.jsx';
+import './day4.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

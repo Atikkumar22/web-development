@@ -1,11 +1,12 @@
-// Footer.jsx
 import React from 'react';
 
-const Footer = ({ academyName }) => {
+const Footer = ({ name }) => {
   return (
-    <footer style={{ marginTop: '50px', borderTop: '1px solid #ccc' }}>
-      <p>© 2025 {academyName}. All rights reserved.</p>
-    </footer>
+    <div className="box footer-box">
+      <h3>Footer (Grandchild)</h3>
+      <p>Finally! Using data: <span style={{color: '#f1c40f'}}>{name}</span></p>
+      <p>© 2025 All Rights Reserved.</p>
+    </div>
   );
 };
 

@@ -1,17 +1,20 @@
-
 import React from 'react';
 import MainPage from './MainPage';
 
-function Apps() {
-  const name = "Horizon Tennis Academy";
+function App() {
+  const academyName = "Horizon Tennis Academy";
 
   return (
-    <div className="App">
-      <h1>Academy Portal</h1>
-      {/* Passing data to MainPage */}
-      <MainPage academyName={name} />
+    <div className="app-container">
+      <div className="box app-box">
+        <h1>App Component</h1>
+        <p>Data Origin: <span className="prop-label">{academyName}</span></p>
+        
+        {/* Passing to Middleman */}
+        <MainPage name={academyName} />
+      </div>
     </div>
   );
 }
 
-export default Apps;
+export default App;

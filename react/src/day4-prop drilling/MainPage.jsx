@@ -1,13 +1,15 @@
-// MainPage.jsx
 import React from 'react';
 import Footer from './Footer';
-const MainPage = ({ academyName }) => {
+
+const MainPage = ({ name }) => {
   return (
-    <main>
-      <h2>Welcome to the Training Dashboard</h2>
-      {/* Drilling happens here: Passing academyName to Footer */}
-      <Footer academyName={academyName} />
-    </main>
+    <div className="box main-box">
+      <h2>MainPage (Middleman)</h2>
+      <p>I don't use the name, but I must pass it.</p>
+      
+      {/* Drilling happens here */}
+      <Footer name={name} />
+    </div>
   );
 };
 
