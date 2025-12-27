@@ -1,35 +1,54 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-// import './App.css'
+import React from 'react'
 
-// function App() {
-//   const [count, setCount] = useState(0)
+import Card from "./day2-Components/Card.jsx";
+import Paragraph from "./day2-Components/Paragraph.jsx";
+import CreateTodo from './day2-Components/CreateTodo.jsx';
 
-//   return (
-//     <>
-//       <div>
-//         <a href="https://vite.dev" target="_blank">
-//           <img src={viteLogo} className="logo" alt="Vite logo" />
-//         </a>
-//         <a href="https://react.dev" target="_blank">
-//           <img src={reactLogo} className="logo react" alt="React logo" />
-//         </a>
-//       </div>
-//       <h1>Vite + React</h1>
-//       <div className="card">
-//         <button onClick={() => setCount((count) => count + 1)}>
-//           count is {count}
-//         </button>
-//         <p>
-//           Edit <code>src/App.jsx</code> and save to test HMR
-//         </p>
-//       </div>
-//       <p className="read-the-docs">
-//         Click on the Vite and React logos to learn more
-//       </p>
-//     </>
-//   )
-// }
+import Nav from './day3-structures/navbar/Nav.jsx';
+import Hero from './day3-structures/hero section/Hero.jsx';
+import Middle from './day3-structures/middle section/Middle.jsx';
+import Services from './day3-structures/services/Services.jsx';
+import './day3.css'
 
-// export default App
+
+
+import Prop from './day4-prop drilling/Prop.jsx';
+import Footer from './day4-prop drilling/Footer.jsx';
+import MainPage from './day4-prop drilling/MainPage.jsx';
+import Apps from './day4-prop drilling/Apps.jsx';
+import './day4.css'
+
+const App = () => {
+    return (
+        <div>
+//DAY2
+
+            {/* <Card />
+  <Paragraph />
+  <CreateTodo /> */}
+
+
+//DAY3
+
+            {/* <Nav />
+          <Hero />
+          <Middle />
+          <Services /> */}
+
+
+            // DAY4
+            <Prop />
+            <Footer />
+            <MainPage />
+            <Apps />
+        </div>
+
+
+    )
+}
+
+
+
+export default App
+
+
