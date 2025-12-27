@@ -11,11 +11,12 @@ import Middle from './day3-structures/middle section/Middle.jsx';
 import Services from './day3-structures/services/Services.jsx';
 // import './day3.css'
 
-import Prop from './day4-prop drilling/Prop.jsx';
-import Footer from './day4-prop drilling/Footer.jsx';
-import MainPage from './day4-prop drilling/MainPage.jsx';
-import Apps from './day4-prop drilling/Apps.jsx';
-import './day4.css'
+// import Prop from './day4-prop drilling/Prop.jsx';
+// import Footer from './day4-prop drilling/Footer.jsx';
+// import MainPage from './day4-prop drilling/MainPage.jsx';
+// import Apps from './day4-prop drilling/Apps.jsx';
+// import './day4.css'
+import App from './App.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -33,10 +34,11 @@ createRoot(document.getElementById('root')).render(
     <Services /> */}
 
     {/* DAY4 */}
-    <Prop />
+    {/* <Prop />
     <Footer />
     <MainPage />
-    <Apps />
+    <Apps /> */}
 
+      <App/>
   </StrictMode>
 )
