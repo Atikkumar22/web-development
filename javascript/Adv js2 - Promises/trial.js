@@ -30,3 +30,18 @@ const myPromise = new Promise((resolve, reject) => {
   }, 1000);
 });
 
+myPromise
+  .then((result) => {
+    console.log(result.message);
+    console.log("Data:", result.data);
+    return result.data.value * 2; // Chaining promises
+  })
+  .then((doubledValue) => {
+    console.log("Doubled value:", doubledValue);
+  })
+  .catch((error) => {
+    console.error("Error:", error.message);
+  })
+  .finally(() => {
+    console.log("Promise completed (success or failure).");
+  });
