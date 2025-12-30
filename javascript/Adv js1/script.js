@@ -78,4 +78,22 @@ abc(function(fn2){
     fn2(function(){
         console.log('dsfas')
     })
-});   //funtion call me fuction ka naam ni likthe bs fun likhte h
+});   //funtion call me fuction ka naam ni likthe bs fun likhte
+
+//try-catch example
+try {
+  console.log("Start of try block");
+  
+  // This variable does not exist, so it throws an error
+  console.log(nonExistentVariable); 
+  
+  console.log("End of try block"); // This line is skipped!
+
+} catch (error) {
+  // Execution jumps here immediately
+  console.error("An error was caught!"); 
+  console.error("Error message:", error.message);
+
+} finally {
+  console.log("This always runs (cleanup).");
+}
