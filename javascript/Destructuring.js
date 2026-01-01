@@ -77,3 +77,18 @@ console.log(skills);//will print whole object 1stkey in first and remaining in s
 // console.log(allskills);
 
 
+// Ek simple array
+const fruits = ["Apple", "Banana", "Mango"];
+
+// Bina destructuring ke:
+// let a = fruits[0];
+// let b = fruits[1];
+
+// Destructuring ke saath:
+const [first, second] = fruits;
+
+console.log(first);  // Output: Apple
+console.log(second); // Output: Banana
+
+
+
