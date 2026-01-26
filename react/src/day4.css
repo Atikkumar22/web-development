@@ -1,4 +1,6 @@
+@import "tailwindcss";
 /* Pura page center karne ke liye */
+
 .app-container {
   display: flex;
   flex-direction: column;

@@ -16,7 +16,9 @@ import Prop from './day4-prop drilling/Prop.jsx';
 import Footer from './day4-prop drilling/Footer.jsx';
 import MainPage from './day4-prop drilling/MainPage.jsx';
 import Apps from './day4-prop drilling/Apps.jsx';
-import './day4.css'
+import './day4.css';
+import Prop1 from './day4-prop drilling/Prop1.jsx';
+import Prop2 from './day4-prop drilling/Prop2.jsx';
 
 const App = () => {
     return (
@@ -40,9 +42,19 @@ const App = () => {
             <Footer />
             <MainPage />
             <Apps /> */}
+            < Prop1 user = "nicky" />
+            {/* < Prop2 user = "nicku"/>
+            < Prop2 text = "1"/>
+            < Prop2 text = "2"/>
+            < Prop2 text = "3"/>
+            < Prop2 text = "4"/> */}
+            < Prop2 user = "nicku" buttons={["1","2","3","4","5"]} />
+
+            
+            
+            {/*  DAY5 */}
             
 
-            {/*  DAY5 */}
         </div>
 
     )

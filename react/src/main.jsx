@@ -20,25 +20,6 @@ import App from './App.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    {/* <App /> */}
-    
-    {/* DAY2 */}
-    {/* <Card />
-    <Paragraph />
-    <CreateTodo /> */}
-
-    {/* DAY3 */}
-    {/* <Nav />
-    <Hero />
-    <Middle />
-    <Services /> */}
-
-    {/* DAY4 */}
-    {/* <Prop />
-    <Footer />
-    <MainPage />
-    <Apps /> */}
-
-      <App/>
+    <App />
   </StrictMode>
 )
