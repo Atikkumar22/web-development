@@ -6,21 +6,35 @@ const app = express()
 //     res.send("yoyo")
 // })
 
+app.use(express.json())  //using middleware so that request kiya hua data dekh  sake wrna data ni dikhega
+
 const notes =[
     {
         title: "title1",
-        desc: "title desc1"
+        desc: "desc1"
     },
     {
         title: "title2",
-        desc: "title desc2"
+        desc: "desc2"
     }
 ]
 
-app.post("/notes",(req,res) => {
+// post use to create new resources
+app.post("/notes", (req,res) => {
+    
+    console.log(req.body)
+    
     res.send("note created")
+
+    notes.push(req.body)
+}) 
+
+//get api for retrieving resources(data) from the server
+app.get("/notes", (req,res) => {
+    res.send(notes)
 })
 
+//listen is used to start the server
 app.listen(3000, () => {
-    console.log("serner is running on port 3000 ")
+    console.log("server is running on port 3000 ")
 })
