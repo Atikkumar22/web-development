@@ -7,4 +7,21 @@ const express = require("express")
 
 const app = express()
 
-module.export = app
+const notes = []
+
+app.use(express.json()) //middleware use 
+
+app.get("/", (req,res) => {
+    res.send("yoyo")
+})
+
+app.post("/notes", (req,res) => {
+    console.log(req.body)
+    notes.push(req.body)
+    console.log(notes)
+    res.send("Notes Created Brother")
+})
+
+
+
+module.exports = app
