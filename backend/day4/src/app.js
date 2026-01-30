@@ -29,6 +29,7 @@ app.get("/notes", (req,res) => {
 })
 
 //delete method api to delete /notes
+
 /* since hume ni pata ki client konse notes ko delete karega to hum usse note ke index value ko dyanmic banate h : use kr ke 
 delete/ notes/:index says ki notes me _ index pe note h use delete kr do
 */
@@ -38,6 +39,17 @@ app.delete("/notes/:index",  (req,res) =>{
 
     delete notes[ req.params.index]
     res.send("note deleted successfully")
-})  
+})
+
+//Patch method api to update few things
+/*PATCH .notes/:index
+  req.body = {description :- "sample modified description"} 
+*/
+
+app.patch("/notes/:index", (req,res) => {
+    notes[req.params.index].about = req.body.about
+
+    res.send("notes updated")
+})
 
 module.exports = app
