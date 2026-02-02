@@ -20,7 +20,13 @@ app.get("/enteries", (req,res) => {
     })
 })
 
-app.delete("/enterie ")
+app.delete("/enteries/:index" , (req,res) => (
+    delete diary[req.params.index]
+
+    res.status(204).json({
+        message:"Entry deleted"
+    })
+))
 
 
 
