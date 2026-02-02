@@ -20,14 +20,21 @@ app.get("/enteries", (req,res) => {
     })
 })
 
-app.delete("/enteries/:index" , (req,res) => (
+app.delete("/enteries/:index" , (req,res) => {
     delete diary[req.params.index]
 
     res.status(204).json({
         message:"Entry deleted"
     })
-))
+})
 
+app.patch("/enteries/:index", (req,res) => {
+    diary[ req.params.index].Entry = req.body.Entry
+
+    res.status(200).json({
+        message:"Entry updated"
+    })
+})
 
 
 
