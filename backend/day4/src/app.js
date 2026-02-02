@@ -9,7 +9,7 @@ const app = express()
 
 const notes = []
 
-app.use(express.json()) //middleware use 
+app.use(express.json()) //middleware use : iska use isliye krte taki humara server req.body ke andar ane wale data ko read kr sake 
 
 app.get("/", (req,res) => {
     res.send("yoyo")
