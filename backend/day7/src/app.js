@@ -18,6 +18,16 @@ app.post("/notes" , async (req,res) => {
     })
 })
 
+app.get("/notes", async (req,res) => {
+    //find method ka istemal hum DB read krne ke liye krte h 
+    const note = await noteModel.find()
+       
+    res.status(200).json({
+        message: "Note fetched successfully",
+        note
+    })
+})
+
 
 
 
