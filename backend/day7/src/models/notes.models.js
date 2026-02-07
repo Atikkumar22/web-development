@@ -2,6 +2,7 @@ const mongoose = require("mongoose")
 
 
 //Schema ki madad se hume data ka blueprint decide  krte hai  h ki Db me konsa type ka data store krne wale h or kis formate m 
+// jo bhi cheeze humne scheme me rahkhi sirf wahi DB me visible hongi 
 const noteSchema = new mongoose.Schema({
     title: String,      // property: type 
     description: String,
