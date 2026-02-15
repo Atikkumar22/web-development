@@ -5,6 +5,7 @@ const noteModel = require("../models/note.model")
 const app = express()
 app.use(express.json())
 
+//api to create data
 app.post("/api/notes", async (req,res) => {
     const {title , description} = req.body
 
@@ -18,7 +19,26 @@ app.post("/api/notes", async (req,res) => {
     })
 })
 
+//api to fetch data from mongoDb and send them in the response
+app.get("/api/notes", async (req,res) => {
+   const notes = await noteModel.find()
 
+   res.status(200).json({
+    message:"notes send successfully",
+    notes
+   })
+})
+
+//api to delete the existing data using the id given by the mongo
+app.delete("/api/notes/:id", async (req,res) =>{
+    const id = req.params.id
+
+    await noteModel.findByIdAndDelete(id)
+
+    res.status(200).json({
+        message:"Note deleted"
+    })
+})
 
 
 
