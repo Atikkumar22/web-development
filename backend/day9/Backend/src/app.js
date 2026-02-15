@@ -1,8 +1,9 @@
 const express = require("express")
 const noteModel = require("../models/note.model")
-
+const cors = require("cors")
 
 const app = express()
+app.use(cors())
 app.use(express.json())
 
 //api to create data
@@ -15,7 +16,8 @@ app.post("/api/notes", async (req,res) => {
     })
 
     res.status(201).json({
-        message: "Note create"
+        message: "Note created",
+        note
     })
 })
 
