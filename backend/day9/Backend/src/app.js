@@ -53,5 +53,15 @@ app.patch("/api/notes/:id", async (req,res) =>{
         message:"Note Updated",
     })
 })
+app.patch("/api/notes/:id", async (req,res) =>{
+    const id = req.params.id
+    const {title} = req.body
+
+    await noteModel.findByIdAndUpdate(id, {title})
+
+    res.status(200).json({
+        message:"Note Updated",
+    })
+})
 
 module.exports = app
