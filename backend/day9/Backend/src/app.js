@@ -59,8 +59,12 @@ app.patch("/api/notes/:id", async (req,res) =>{
     })
 })
 
-// Keep API above this route. Non-API requests should return frontend app.
-app.get("*", (req, res) => {
+// Keep API above this middleware. Non-API GET requests should return frontend app.
+app.use((req, res, next) => {
+    if (req.method !== "GET" || req.path.startsWith("/api")) {
+        return next()
+    }
+
     res.sendFile(path.join(__dirname, "../public/index.html"))
 })
 
