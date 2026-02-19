@@ -1,10 +1,15 @@
 const express = require("express")
-const noteModel = require("../models/note.model")
+const noteModel = require("./models/note.model")
 const cors = require("cors")
+const path = require("path")
 
 const app = express()
+
 app.use(cors())
 app.use(express.json())
+
+//hum iss middleware ka use kr rahe taki jitne bhi resorces h public folder me unhe use kr sake
+app.use(express.static("./public"))
 
 //api to create data
 app.post("/api/notes", async (req,res) => {
@@ -64,4 +69,5 @@ app.patch("/api/notes/:id", async (req,res) =>{
     })
 })
 
+app.use(*name, __dirname,".." , ./public/assests)
 module.exports = app
