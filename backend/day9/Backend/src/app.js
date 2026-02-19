@@ -8,7 +8,7 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-//hum iss middleware ka use kr rahe taki jitne bhi resorces h public folder me unhe use kr sake
+//hum iss middleware ka use kr rahe taki jitne bhi resorces h public folder me h unhe use kr sake
 app.use(express.static("./public"))
 
 //api to create data
@@ -69,5 +69,6 @@ app.patch("/api/notes/:id", async (req,res) =>{
     })
 })
 
-app.use(*name, __dirname,".." , ./public/assests)
+// app.use(*name, __dirname,".." , ./public/assests)
+
 module.exports = app
