@@ -3,8 +3,6 @@ import axios from "axios"
 function App() {
 
   const [notes, setNotes ] = useState([])
-  
-  console.log("integrated")
 
   function fetchNotes(){
     axios.get('http://localhost:3000/api/notes')
@@ -50,12 +48,12 @@ function App() {
       fetchNotes()
     })
     
-    const newTitle = prompt("Enter new title");
+    // const newTitle = prompt("Enter new title");
     axios.patch('http://localhost:3000/api/notes/'+noteId,
       { title: newTitle }
     )
     .then(res => {
-      console.log(res.handleNoteUpdate)
+      console.log(res.data)
       fetchNotes()
     })
   }
@@ -65,7 +63,7 @@ function App() {
       <div className="topBar">
         <form className='note-create' onSubmit={handleSubmit}>
           <input className='entries' type="text" name='title' placeholder='Enter title' />
-          <input className='entries' type="text" name='description' placeholder='Enter details' />
+          <input className='entries' type="text" name='description' placeholder='Enter description' />
           <button className='entries entBtn'>Create Note</button>
         </form>
       </div>
