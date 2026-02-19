@@ -5,7 +5,7 @@ function App() {
   const [notes, setNotes ] = useState([])
 
   function fetchNotes(){
-    axios.get('https://web-development-xd53.onrender.com/api/notes')
+    axios.get('http://localhost:3000/api/notes')
     .then((res) =>{
       setNotes(res.data.notes)
     })
@@ -20,7 +20,7 @@ function App() {
 
     console.log(title.value, description.value)
 
-    axios.post("https://web-development-xd53.onrender.com/api/notes", {
+    axios.post("http://localhost:3000/api/notes", {
       title: title.value,
       description: description.value
     })
@@ -32,7 +32,7 @@ function App() {
   }
 
   function handleNoteDelete(noteId){
-    axios.delete('https://web-development-xd53.onrender.com/api/notes/'+noteId)
+    axios.delete('http://localhost:3000/api/notes/'+noteId)
     .then(res => {
       console.log(res.data)
       fetchNotes()
@@ -41,7 +41,7 @@ function App() {
 
   function handleNoteUpdate(noteId){
     const newDescription = prompt("Enter new description");
-    axios.patch('https://web-development-xd53.onrender.com/api/notes/'+noteId,
+    axios.patch('http://localhost:3000/api/notes/'+noteId,
       { description: newDescription }
     )
     .then(()=> {
@@ -50,7 +50,7 @@ function App() {
     
     // const newTitle = prompt("Enter new title");
     const newTitle = prompt("Enter new title");
-    axios.patch('https://web-development-xd53.onrender.com/api/notes/'+noteId,
+    axios.patch('http://localhost:3000/api/notes/'+noteId,
       { title: newTitle }
     )
     .then(res => {
