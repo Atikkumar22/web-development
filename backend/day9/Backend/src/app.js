@@ -69,6 +69,4 @@ app.patch("/api/notes/:id", async (req,res) =>{
     })
 })
 
-// app.use(*name, __dirname,".." , ./public/assests)
-
 module.exports = app
