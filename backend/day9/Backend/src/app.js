@@ -8,8 +8,8 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-//hum iss middleware ka use kr rahe taki jitne bhi resorces h public folder me h unhe use kr sake
-app.use(express.static("./public"))
+// Serve built frontend files from Backend/public
+app.use(express.static(path.join(__dirname, "../public")))
 
 //api to create data
 app.post("/api/notes", async (req,res) => {
@@ -50,23 +50,18 @@ app.delete("/api/notes/:id", async (req,res) =>{
 //update the desc of the note by id 
 app.patch("/api/notes/:id", async (req,res) =>{
     const id = req.params.id
-    const {description} = req.body
+    const {description, title} = req.body
 
-    await noteModel.findByIdAndUpdate(id, {description})
+    await noteModel.findByIdAndUpdate(id, {description, title})
 
     res.status(200).json({
         message:"Note Updated",
     })
 })
-app.patch("/api/notes/:id", async (req,res) =>{
-    const id = req.params.id
-    const {title} = req.body
 
-    await noteModel.findByIdAndUpdate(id, {title})
-
-    res.status(200).json({
-        message:"Note Updated",
-    })
+// Keep API above this route. Non-API requests should return frontend app.
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/index.html"))
 })
 
 module.exports = app
