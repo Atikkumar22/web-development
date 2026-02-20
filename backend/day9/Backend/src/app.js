@@ -2,6 +2,7 @@ const express = require("express")
 const noteModel = require("./models/note.model")
 const cors = require("cors")
 const path = require("path")
+const { clearScreenDown } = require("readline")
 
 const app = express()
 
@@ -9,7 +10,8 @@ app.use(cors())
 app.use(express.json())
 
 // Serve built frontend files from Backend/public
-app.use(express.static(path.join(__dirname, "../public")))
+/* app.use(express.static("./public"))*/
+app.use(express.static(path.join(__dirname, "public")));
 
 //api to create data
 app.post("/api/notes", async (req,res) => {
@@ -60,12 +62,9 @@ app.patch("/api/notes/:id", async (req,res) =>{
 })
 
 // Keep API above this middleware. Non-API GET requests should return frontend app.
-app.use((req, res, next) => {
-    if (req.method !== "GET" || req.path.startsWith("/api")) {
-        return next()
-    }
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
+});
 
-    res.sendFile(path.join(__dirname, "../public/index.html"))
-})
 
 module.exports = app
