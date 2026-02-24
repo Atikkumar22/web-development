@@ -1,6 +1,7 @@
 const express = require("express")
 const userModel = require("../model/user.model")
 const jwt = require("jsonwebtoken")
+
 const authRouter = express.Router()
 
 //isse hit krne ke liye /api/auth/register kr ke use krna hoga
@@ -26,6 +27,8 @@ authRouter.post("/register", async(req,res) => {
         process.env.JWT_SECRET
     )
 
+    res.cookie("jwt_token", token)
+
     res.status(201).json({
         message:"User registered",
         user,
@@ -33,4 +36,4 @@ authRouter.post("/register", async(req,res) => {
     })
 })
 
-module.exports = authRouter
+module.exports = authRouter  
