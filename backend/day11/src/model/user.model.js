@@ -18,7 +18,7 @@ const userSchema = new mongoose.Schema({
     bio:String,
     profile:{
         type: String,
-        default: https://ik.imagekit.io/Atik/default.webp
+        default:" https://ik.imagekit.io/Atik/default.webp"
     }
 })
 
