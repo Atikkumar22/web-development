@@ -35,7 +35,7 @@ authRouter.post("/register", async (req, res )=>{
 
     if(isUserExist){
         return res.status(409).json({
-            message: "User already exist" + (isUserExist.email == email ? "Email already exits" : "Username already exists")
+            message: "User already exist. " + (isUserExist.email == email ? "Email already exits" : "Username already exists")
         })
     }
 
@@ -43,16 +43,34 @@ authRouter.post("/register", async (req, res )=>{
 
     const user = await userModel.create({
         username,
-        bio:string,
+        email,
+        bio,
         profile,
         password: hash
     })
 
     const token = jwt.sign(
         {
-            id: user_id
+            id: user._id
         },
         process.env.JWT_SECRET, 
         { expiresIn:"1d"}
     )
+
+    res.cookie("token", token)
+
+    res.status(201).json({
+        message: "User registration successful",
+        user:{
+            email: user.email,
+            username: user.username,
+            bio: user.bio,
+            profile: user.profile
+        }
+    })
 })
+
+authRouter.post("/login" , async (req,res) => {
+    const {email, password,  username} = req.body
+})
+module.exports = authRouter 
