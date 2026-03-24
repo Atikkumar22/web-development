@@ -20,8 +20,14 @@ async function createPostController(req, res){
         })
     }
 
-    const decoded = jwt.verify(token, process.env.JWT_SECRET)
-    // console.log(decoded)
+    try{
+        const decoded = jwt.verify(token, process.env.JWT_SECRET)
+    }catch(err){
+        return res.status(401).json({
+            message:"User not authorized"
+        })
+    }
+    
    
     const file = await Imagekit.files.upload({
         file: await toFile(Buffer.from(req.file.buffer), 'file'),
