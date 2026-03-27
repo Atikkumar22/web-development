@@ -20,8 +20,9 @@ async function createPostController(req, res){
         })
     }
 
+    let decoded = null
     try{
-        const decoded = jwt.verify(token, process.env.JWT_SECRET)
+       decoded = jwt.verify(token, process.env.JWT_SECRET)
     }catch(err){
         return res.status(401).json({
             message:"User not authorized"
