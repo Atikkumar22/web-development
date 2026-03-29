@@ -9,6 +9,7 @@ const Imagekit = new imagekit({
 
 async function createPostController(req, res){
     console.log(req.body, req.file)
+/*  ISKO HUM YAHA SE UTHA KE MIDDLEWARE ME DALANGE Q KI YE BLOCK OH CODE REPEAT HO RAHA H TEENO API CONTOLLERS ME 
 
     //different users agar file send kare server ko to ye check krne ke liye konse se user ki taraf se file ayi h hum tokens ka use karenge, like in login
     const token = req.cookies.token
@@ -28,7 +29,7 @@ async function createPostController(req, res){
             message:"User not authorized"
         })
     }
-    
+*/   
    
     const file = await Imagekit.files.upload({
         file: await toFile(Buffer.from(req.file.buffer), 'file'),
@@ -39,7 +40,7 @@ async function createPostController(req, res){
     const post = await postModel.create({
         caption: req.body.caption,
         imgUrl: file.url,
-        user: decoded.id
+        user: req.user.id
     })
 
     res.status(201).json({
@@ -48,8 +49,50 @@ async function createPostController(req, res){
     })
 }
 
+
+async function getPostController(req, res){
+
+    const userId = req.user.id
+
+    const post =  await postModel.find({
+        user: userId
+    })
+
+    res.status(200).json({
+        message: "Posts fetched successfully",
+        post
+    })
+}
+
+async function getPostDetails(req, res){
+    const userId = req.user.id
+    const postId = req.params.postId
+
+    const post = await postModel.findById(postId)
+
+    if(!post){
+        return res.status(404).json({
+            message:"Post not found"
+        })
+    }
+
+    const isValidUser = post.user.toString() === userId
+    if(!isValidUser){
+        return res.status(403).json({
+            message:"Forbidden Content"
+        })
+    }
+
+     return res.status(200).json({
+            message:"Post fetched successfully",
+            post
+        })
+}
+
 module.exports = {
-    createPostController
+    createPostController,
+    getPostController,
+    getPostDetails
 }
 
 
