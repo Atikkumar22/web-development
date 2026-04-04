@@ -4,9 +4,22 @@ async function followUserController(req, res) {
     const followerUsername = req.user.username
     const followeeUsername = req.params.username 
 
+    // check for user not follow themselve
     if(followeeUsername === followerUsername){
         return res.status(400).json({
             message: "You cannot follow yourself"
+        })
+    }
+
+    //creating check so that user dont follow same user twice
+    const isAlreadyFollowing = await followModel.findOne({
+        follower: followerUsername,
+        followee: followeeUsername
+    })
+
+    if(isAlreadyFollowing){
+        return res.status(200).json({
+            message:"You are already following this user"
         })
     }
 
