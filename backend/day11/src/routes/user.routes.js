@@ -8,6 +8,6 @@ const userRouter = express.Router()
 @route Post /api/"user/follow/:username
 @description follow a user
 @access Private  */
-userRouter.post("/follow/:username", identifyUser, userController.followUsercontroller)
+userRouter.post("/follow/:username", identifyUser, userController.followUserController)
 
 module.exports = userRouter
