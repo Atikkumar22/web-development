@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 const Login = () => {
 
-  const [username, setUsername] = useState{ ""}
-  const [password, setPassword] = useState{ ""}
+  const [username, setUsername] = useState("")
+  const [password, setPassword] = useState("")
 
   return (
     <div>
