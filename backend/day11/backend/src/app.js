@@ -1,11 +1,15 @@
 const express = require("express");
 const cookieParser = require("cookie-parser")
-
+const cors = require("cors")
 
 const app = express();
 
 app.use(express.json());
 app.use(cookieParser());
+app.use(cors({
+    credentials: true, //credentials ko true is liye taki hum hamra BE, FE pe cookies ko setup kr sake
+    origin: "http://localhost:5173" // cookies ka setup ho raha kaha se ye batana h 
+}))
 
 // require routes
 const authRouter = require("./routes/auth.routes")
